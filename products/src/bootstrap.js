@@ -3,7 +3,7 @@ import { commerce } from "faker";
 const products = [];
 
 function mount(el) {
-  console.log("products.mount...el...", el);
+  console.log("Products.mount...el...", el);
   // generate product names
   for (let i = 0; i < 5; i++) {
     const name = commerce.productName();
@@ -28,7 +28,7 @@ function mount(el) {
 
 // FOR local development
 if (process.env.NODE_ENV === "development") {
-  console.log("products...development");
+  // console.log("products...development");
   const el = document.getElementById("dev-products-only");
   if (el) {
     mount(el);
@@ -37,4 +37,4 @@ if (process.env.NODE_ENV === "development") {
 
 // FOR INTEGRATION we export mount
 // export default mount;
-export { mount };
+export default { mount };

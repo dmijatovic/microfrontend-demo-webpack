@@ -1,14 +1,19 @@
-import { mount } from "products/ProductsIndex";
-import "cart/CartIndex";
+import products from "products/ProductsIndex";
+import cart from "cart/CartIndex";
 
 const elProd = document.getElementById("product-list");
+const elCart = document.getElementById("cart-section");
 
 if (elProd) {
-  mount(elProd);
+  products.mount(elProd);
 }
 
-console.log("container.mount", mount);
-console.log("container.elProd", elProd);
+if (elCart) {
+  cart.mount(elCart);
+}
+
+// console.log("container.mount", products);
+// console.log("container.elProd", elProd);
 // products.mount(elProd);
 
-console.log("Container");
+console.log("Container...started");
